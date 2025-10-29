@@ -108,7 +108,9 @@ const PlaylistPage = ({ userId: propUserId }) => {
   const [status, setStatus] = useState("");
   const navigate = useNavigate();
   const location = useLocation(); // 🟢
-  const backendUrl = "http://localhost:5000";
+//   const backendUrl = "http://localhost:5000";
+const backendUrl = process.env.REACT_APP_API || "https://emotion-test-website-production.up.railway.app";
+
 
   // 🟢 Load userId either from props or navigation state
   const userId = propUserId || location.state?.userId;

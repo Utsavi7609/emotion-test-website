@@ -5,7 +5,13 @@ import { supabase } from "./supabaseClient.js";
 
 const app = express();
 app.use(express.json());
-app.use(cors());
+// app.use(cors());
+app.use(
+  cors({
+    origin: "https://emotion-test-website.vercel.app", // ✅ only your deployed frontend
+    methods: ["GET", "POST"],
+  })
+);
 
 const emotions = ["Happy", "Sad", "Angry", "Fearful", "Calm", "Excited", "Neutral"];
 const userProgress = {}; // Temporary memory-based tracker
