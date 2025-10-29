@@ -8,7 +8,9 @@ const ResultsPage = () => {
   const navigate = useNavigate();
   const location = useLocation();
   const userId = location.state?.userId || 1; // passed from previous page
-  const backendUrl = "http://localhost:5000";
+//   const backendUrl = "http://localhost:5000";
+const backendUrl = process.env.REACT_APP_API || "https://emotion-test-website-production.up.railway.app";
+
 
   const [drift, setDrift] = useState(null);
 

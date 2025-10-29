@@ -151,7 +151,7 @@ export default function StudyPage() {
             fontSize: "14px",
           }}
         >
-          <strong>Note:</strong> You will watch 24 short video clips and rate your
+          <strong>Note:</strong> You will watch 23 short video clips and rate your
           emotional responses. Please ensure you have a quiet environment and
           about 30 minutes available.
         </div>
